@@ -4,6 +4,16 @@
     
 <div class="row justify-content-center">
     <div class="col-md-4">
+
+        @if (session()->has('Success'))
+            
+         <div class="alert alert-success alert-dismissible fade show" role="alert">
+             {{ session('Success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        @endif
+
         <main class="form-signin">
             <h1 class="h3 mb-3 fw-normal text-center mt-5">Please Login</h1>
             <i class="bi bi-person-circle d-block text-center display-1"></i>
